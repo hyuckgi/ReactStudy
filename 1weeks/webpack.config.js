@@ -1,7 +1,9 @@
 var webpack = require('webpack');
 
+// import webpack from 'webpack';
+
 module.exports = {
-    entry: ['react-hot-loader/patch', './src/index.js'],
+    entry: './src/index.js',
 
     output: {
         path: __dirname + '/public/',
@@ -24,7 +26,7 @@ module.exports = {
                 exclude: /node_modules/,
                 query: {
                     cacheDirectory: true,
-                    presets: ['es2015', 'stage-0', 'react'],
+                    presets: ['es2015','react'],
                     plugins: ["react-hot-loader/babel"]
                 }
             }
