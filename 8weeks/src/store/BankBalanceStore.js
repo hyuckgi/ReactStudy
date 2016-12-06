@@ -11,7 +11,6 @@ let BankBalnceStore = {
     getState(){
         return balance;
     },
-    
     addListener(callback){
         return _emitter.addListener(CHANGE_EVENT, callback);
     }
