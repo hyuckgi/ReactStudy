@@ -3,7 +3,7 @@ var webpack = require('webpack');
 // import webpack from 'webpack';
 
 module.exports = {
-    entry: './src/index.js',
+    entry: './src/App.js',
 
     output: {
         path: __dirname + '/public/',
@@ -11,11 +11,11 @@ module.exports = {
     },
 
     devServer: {
-        hot: true,
+        contentBase: "./public",
+        colors: true,
+        historyApiFallback: true,
         inline: true,
-        host: '0.0.0.0',
-        port: 4000,
-        contentBase: __dirname + '/public/',
+    	port: 8000
     },
 
     module: {
@@ -25,15 +25,13 @@ module.exports = {
                 loader: 'babel',
                 exclude: /node_modules/,
                 query: {
-                    cacheDirectory: true,
-                    presets: ['es2015','react'],
-                    plugins: ["react-hot-loader/babel"]
+                    presets: ['es2015','react']
                 }
             }
         ]
-    },
+    }
 
-    plugins: [
-        new webpack.HotModuleReplacementPlugin()
-    ]
+    // plugins: [
+    //     new webpack.HotModuleReplacementPlugin()
+    // ]
 }

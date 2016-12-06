@@ -1,6 +1,6 @@
 import { EventEmitter } from "fbemitter";
 import AppDispatcher from '../AppDispatcher';
-// import bankConstants from './constants';
+import bankConstants from '../constants';
 
 const CHANGE_EVENT = 'change';
 
