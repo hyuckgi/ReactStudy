@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import
-
 
 import About from './About';
 import Home from './Home';

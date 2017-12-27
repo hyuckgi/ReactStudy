@@ -31,7 +31,7 @@ class RepoDetails extends Component{
 
   renderRepository(){
     let repository = this.props.repositories.find((repo) => repo.name === this.props.params.repo_name);
-
+    console.log("renderRepository",repository)
     let start = [];
     for (var i=0; i < repository.stargazers_count; i++){
       start.push('★');

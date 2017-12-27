@@ -4,6 +4,7 @@ import style from './kanban.css';
 class CheckList extends Component{
   checkInputKeyPress(e){
     if(e.key === 'Enter'){
+      console.log("Hit Enter")
       this.props.taskCallbacks.add(this.props.cardId, e.target.value);
       e.target.value='';
     }
@@ -11,18 +12,23 @@ class CheckList extends Component{
 
 
   render(){
+    console.log("this.props.tasks.",this.props.tasks)
     let tasks = this.props.tasks.map((task) => {
-      <li key={task.id} className={style.checklist_task}>
-        <input type={style.checkbox} defaultChecked={task.done} onChange={
-          this.props.taskCallbacks.toggle.bind(null, this.props.cardId, task.id, task.Index)
-        } />
-        {task.name}{' '}
-        <a href="#" className = {style.checklist_task_remove} onChange={
-          this.props.taskCallbacks.delete.bind(null, this.props.cardId, task.id, task.Index)
-        } />
-      </li>
+      console.log("task.done",task.done)
+      return(
+        <li key={task.id} className={style.checklist_task}>
+          <input type="checkbox" defaultChecked={task.done} onChange={
+            this.props.taskCallbacks.toggle.bind(null, this.props.cardId, task.id, task.Index)
+          } />
+          {task.name}{' '}
+          <a href="#" className = {style.checklist_task_remove} onChange={
+            this.props.taskCallbacks.delete.bind(null, this.props.cardId, task.id, task.Index)
+          } />
+        </li>
+      )
     });
-
+   
+    console.log("this.props.tasks.",tasks)
     return (
       <div className={style.checklist}>
         <ul>{tasks}</ul>

@@ -39,6 +39,7 @@ class KanBanBoardContainer extends Component{
 
 
   addTask(cardId, taskName){
+    console.log("addTask")
     let cardIndex = this.state.cards.findIndex((card) => card.id === cardId);
 
     let newTask = {id:Date.now(), name : taskName, done :false};

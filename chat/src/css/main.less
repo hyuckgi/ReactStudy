@@ -1,0 +1,118 @@
+html{
+    &,body {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: "Apple SD Gothic","나눔고딕", "NanumGothic", sans-serif;
+        background: #f5f5f5;
+        color: #4d4d4d;
+        min-width: 230px;
+        max-width: 550px;
+        margin: 0 auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-font-smoothing: antialiased;
+        font-smoothing: antialiased;
+        font-weight: 300;
+    }
+
+    input {
+        padding: 5px;
+        border: 1px solid rgba(0,0,0,0.3);
+    }
+
+    input::-webkit-input-placeholder {
+        font-style: italic;
+        font-weight: 300;
+        color: rgba(0,0,0,0.3);
+    }
+
+    input::-moz-placeholder {
+        font-style: italic;
+        font-weight: 300;
+        color: rgba(0,0,0,0.3);
+    }
+
+    input::input-placeholder {
+        font-style: italic;
+        font-weight: 300;
+        color: rgba(0,0,0,0.3);
+    }
+
+    h1 {
+        font-weight: 100;
+        font-size: 20px;
+        padding:20px;
+        margin: 0;
+    }
+
+    button{
+        padding: 0;
+    }
+    ul{
+        padding: 0;
+        margin:0;
+    }
+    li{
+        text-decoration: none;
+        list-style-type: none;
+    }
+    #app{
+        background-color:#9bbbd4; 
+        .chatwrap{
+            padding: 20px;
+            ul{
+                li{
+                    border-radius: 10px;
+                    margin-bottom: 5px;
+                    &.yellow{
+                        text-align: right;
+                        span{
+                            background: #fff515;
+                        }
+                    }
+                    strong{
+                        font-weight: bold;
+                        margin-right:10px; 
+                    }
+                    span{
+                        background: white;
+                        padding: 5px;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        .inputwrap{
+            padding: 20px;
+            input{
+                &.new{
+                    width: 440px;
+                    height: 50px;
+                    font-size: 20px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    border-radius: 5px 0 0 5px;
+                    font-size: 11pt;
+                }
+            }
+            button{
+                &.btn{
+                    width: 40pt;
+                    height: 50px;
+                    border-radius: 0 5px 5px 0;
+                    background-color: #fff515;
+                    display: inline-block;
+                    vertical-align: middle;
+                    border: 1px solid rgba(0,0,0,0.3);
+                    font-size: 11pt;
+                }
+            }
+        }
+    }
+}
+
+
+
+

@@ -11,7 +11,7 @@ class KanbanBoard extends Component{
       cards: this.props.cards,
       cardCallbacks:this.props.cardCallbacks
     })
-
+    console.log("this.props.children",cardModal)
     return (
       <div className={style.app}>
         <Link to="/new" className={style.floatButton}>+</Link>
